@@ -19,4 +19,6 @@ for calendar in events.keys():
 result = sorted((value, key) for (key, value) in people.items())
 result.reverse()
 for index, item in enumerate(result):
-    print('{}: {} ({} hours)'.format(str.rjust(str(index + 1), 2), str.ljust(item[1], max_name_length), round(item[0], 1)))
+    rank = str(index + 1)
+    name = item[1]
+    print('{}: {} ({} hours)'.format(rank.rjust(2), name.ljust(max_name_length), round(item[0], 1)))
